@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate: starts");
-        mSectionsStatePagerAdapter =new SectionStatePagerAdapter(getSupportFragmentManager());
         mViewPager=findViewById(R.id.container);
         setupViewPager(mViewPager);
 
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         SectionStatePagerAdapter adapter= new SectionStatePagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new Fragment1(),"Fragment1");
         adapter.addFragment(new Fragment2(),"Fragment2");
-        adapter.addFragment(new Fragment2(),"Fragment2");
+        adapter.addFragment(new Fragment3(),"Fragment3");
         mViewPager.setAdapter(adapter);
     }
     public void setViewPager(int fragmentNumber)
